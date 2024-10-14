@@ -13,27 +13,27 @@ const Projects = () => {
         className='my-20 text-center text-4xl'>Projects</motion.h2>
         <div>
              {PROJECTS.map((project, index)=>{
-               return( <><div key={index} className='mb-8  flex flex-wrap justify-center'>
+               return( <><div key={index} className='mb-10 flex flex-wrap justify-center'>
                     <motion.div
                     whileInView={{opacity: 1, x: 0}}
                     initial = {{opacity: 0, x:-100}}
                     transition={{duration:1.5}}
-                    className='w-1/4'>
+                    className='items-center justify-center'>
                         <img src={project.image} 
-                        width={250}
-                         height={250}
+                        width={800}
+                         height={800}
                          alt={project.title}
-                         className='mb-6 rounded'/>
+                         className='mb-8 rounded'/>
                     </motion.div>
                     <motion.div
                     whileInView={{opacity:1, x:0}}
                     initial={{opacity: 0, x:100}}
                     transition={{duration: 1.5}}
-                    className='w-1/2'>
+                    className='text-center'>
                         <h3 className='mb-2 font-semibold text-2xl'>
                             {project.title}
                         </h3>
-                        <p className='mb-4 text-stone-400'>
+                        <p className='mb-4 text-center text-stone-400'>
                             {project.description}
                         </p>
                         {project.technologies.map((tech,index)=>(

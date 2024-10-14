@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -36,14 +36,6 @@ const ContactForm = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
       >
-        <motion.h2
-          className="text-4xl my-6 text-center"
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1.5 }}
-        >
-          Contact Me
-        </motion.h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Field */}
@@ -129,7 +121,7 @@ const ContactForm = () => {
           >
             <button
               type="submit"
-              className="w-full bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-purple-900 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Send Message
             </button>

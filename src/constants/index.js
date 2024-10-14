@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
+import project1 from "../assets/projects/project-1.png";
+import project2 from "../assets/projects/project-2.png";
+import project3 from "../assets/projects/project-2.png";
+import project4 from "../assets/projects/project-1.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -10,16 +10,15 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 export const SERVICES = [
   {
     title: "WordPress Development",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+    description: `I specialize in building custom, responsive WordPress websites tailored to your needs. Whether it's theme customization, plugin integration, or e-commerce setup, I deliver fast, optimized, and secure solutions. With a focus on performance, SEO, and user experience, I ensure your website stands out. Let’s turn your vision into a powerful WordPress site!`,
   },
   {
     title: "Frontend Development",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    description: `I create responsive, visually engaging websites with clean, efficient code. Specializing in HTML, CSS, JavaScript, and modern frameworks, I bring your designs to life with interactive and intuitive user interfaces. From pixel-perfect layouts to seamless performance, I focus on delivering an exceptional user experience. Let’s craft a website that not only looks great but performs flawlessly.`,
   },
   {
     title: "Graphic Designing",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
+    description: `I design visually captivating graphics that communicate your brand’s message effectively. From logos to marketing materials, I focus on creating clean, modern, and eye-catching designs. Whether it's for digital or print media, my designs are tailored to enhance your brand identity. Let’s create stunning visuals that leave a lasting impression.`,
   },
  
 ];
@@ -33,7 +32,7 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "JAVASCRIPT"],
   },
   {
-    title: "Law Firm Website Using WordPress",
+    title: "TODO-List",
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
@@ -43,7 +42,7 @@ export const PROJECTS = [
     title: "Portfolio Website",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
+      "A personal portfolio website showcasing projects, skills, and contact information. jkashdjashdkjasdhsajdh",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
   {
