@@ -9,13 +9,3 @@
   background: rgb(22, 22, 41);
   font-family: "inter", sans-serif;
 }
-@media (max-width: 680px) {
-  .display{
-    display: none;
-  }
-}
-@media (min-width: 680px) {
-  .ham{
-    display: none;
-  }
-}

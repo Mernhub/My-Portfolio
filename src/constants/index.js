@@ -1,9 +1,11 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-2.png";
-import project4 from "../assets/projects/project-1.png";
+import project3 from "../assets/projects/project-3.png";
+import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a passionate Front-End Developer with experience in HTML, CSS, JavaScript, React.js, Node.js, Tailwind CSS, Bootstrap, and WordPress. I specialize in creating responsive, user-friendly websites and web applications that merge creativity with functionality. From custom designs to interactive web solutions, I’m committed to building digital experiences that not only look great but also perform seamlessly. Check out my Resume.
+
+`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
@@ -28,34 +30,36 @@ export const PROJECTS = [
     title: "Pet E-Commerce Website",
     image: project1,
     description:
-      "A fully functional pet e-commerce website with features like pet product listing and shopping cart.",
+      "This static pet e-commerce website was designed to offer an engaging and seamless shopping experience for pet owners. Featuring a wide range of pet products, the site organizes items into easy-to-browse categories like food, toys, and accessories. The responsive design ensures smooth navigation across all devices, from desktops to mobile phones. Built with HTML, CSS, and JavaScript, the website focuses on clean code, a modern layout, and cross-browser compatibility. While static, it emphasizes user-friendly interactions and attractive visuals, providing a solid foundation for future e-commerce functionality.",
     technologies: ["HTML", "CSS", "JAVASCRIPT"],
+    link:"https://github.com/Mernhub/Pet-E-Commerce-Website-Project-",
   },
   {
-    title: "TODO-List",
+    title: "Password-Generator",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "This Password Generator application is designed to create secure and customizable passwords effortlessly. Built using React JS and styled with Tailwind CSS, the app features a sleek, modern interface with a vibrant gradient background. Users can easily generate passwords of varying lengths, with options to include numbers and special characters for enhanced security. The intuitive layout ensures seamless navigation, while the copy functionality allows users to store their generated passwords with a single click. This project demonstrates my skills in front-end development, UI design, and user experience optimization.",
+    technologies: ["HTML", "TailwindCSS","React"],
+    link:"https://github.com/Mernhub/Password-Generator-Using_react-Js",
   },
   {
-    title: "Portfolio Website",
+    title: "Legal Avenue Chamber",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information. jkashdjashdkjasdhsajdh",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "The Legal Avenue Chamber website is a professional platform designed for a law practice, built using WordPress. This project features a clean, modern design that effectively showcases the firm's services, expertise, and contact information. With a focus on user experience, the site includes easy navigation, responsive layouts, and optimized content for both desktop and mobile users. This project highlights my ability to create functional and visually appealing websites, leveraging WordPress to implement custom features and ensure efficient management of content.",
+    technologies: ["WORDPRESS"],
   },
   {
-    title: "Blogging Platform",
+    title: "Crypto Website",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "This crypto website is a static project built using HTML, CSS, and JavaScript, designed to showcase essential information about cryptocurrencies in a sleek, modern interface. It features responsive layouts, smooth transitions, and a user-friendly design to ensure seamless navigation across devices. The project demonstrates my front-end development skills by utilizing clean, semantic HTML, custom CSS styling, and JavaScript to enhance user interactions, making it a visually appealing and functional site.",
+    technologies: ["HTML", "CSS", "JAVASCRIPT"],
+    link:"https://github.com/Mernhub/CryptoVista",
   },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153",
   phoneNo: "0306-4669243",
   email: "136abdullah42@gmail.com",
 };
