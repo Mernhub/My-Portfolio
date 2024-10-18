@@ -4,12 +4,11 @@ import HamburgerMenu from "./Hamburger";
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-between p-4 lg:p-6 shadow-md relative z-50">
-      {/* Hamburger Menu for Mobile */}
-      <div className="lg:hidden">
+    <nav className="flex items-center justify-between p-4 lg:p-0 shadow-md relative z-50 ">
+      {/* Hamburger Menu for Mobile - Hidden on screens larger than 700px */}
+      <div className="md:hidden">
         <HamburgerMenu className="w-[100vw] h-[50vh] z-50" />
       </div>
-
       {/* Logo */}
       <div className="flex flex-shrink-0 items-center">
         <a href="/" aria-label="Home" className="mx-2">
@@ -17,19 +16,22 @@ const NavBar = () => {
         </a>
       </div>
 
-      {/* Navigation Links - Hidden on Mobile, Shown on Large Screens */}
-      <div className="hidden lg:flex items-center">
-        {["Home", "Projects", "Services", "Contact"].map((item, index) => (
-          <motion.a
-            key={index}
-            href={`#${item}`}
-            className="mx-3 text-base lg:text-lg text-gray-700 hover:text-purple-700 transition-colors duration-300"
-            whileHover={{ color: "#6B21A8" }} // Purple on hover
-            transition={{ duration: 0.1 }}
-          >
-            {item}
-          </motion.a>
-        ))}
+
+      
+      <div className="md:fixed top-0 left-0 md:mt-8 hidden  w-full md:flex justify-center z-50">
+        <div className="flex items-center">
+          {["Home", "Projects", "Services", "Contact"].map((item, index) => (
+            <motion.a
+              key={index}
+              href={`#${item}`}
+              className="border-2 border-purple-800  p-2 rounded-xl text-base mx-3 lg:text-lg text-white hover:bg-purple-800 transition-colors duration-300"
+              whileHover={{ color: "white" }} // Purple on hover
+              transition={{ duration: 0.1 }}
+            >
+              {item}
+            </motion.a>
+          ))}
+        </div>
       </div>
 
       {/* Social Media Icons */}

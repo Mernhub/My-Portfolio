@@ -1,6 +1,6 @@
-import { PROJECTS } from '../constants/index'
-import React from 'react'
-import { motion } from 'framer-motion'
+import { PROJECTS } from '../constants/index';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
@@ -21,22 +21,26 @@ const Projects = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ opacity: 0, x: -100 }}
                   transition={{ duration: 1.5 }}
-                  className='items-center justify-center'>
-                  
-                  <img
+                  className='items-center justify-center cursor-pointer'
+                >
+                  <motion.img
                     src={project.image}
                     width={800}
                     height={800}
                     alt={project.title}
                     className='mb-8 rounded'
+                    whileHover={{ scale: 1.05 }} // Scale effect on hover
+                    whileTap={{ scale: 0.95 }} // Scale down on tap/click
+                    transition={{ duration: 0.3 }}
+                    style={{ boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)' }} // Default shadow
                   />
                 </motion.div>
                 <motion.div
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ opacity: 0, x: 100 }}
                   transition={{ duration: 1.5 }}
-                  className='text-center'>
-                  
+                  className='text-center'
+                >
                   <h3 className='mb-2 font-semibold text-2xl'>{project.title}</h3>
                   <p className='mb-4 text-center text-stone-400'>{project.description}</p>
 
@@ -45,7 +49,8 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         className='mr-2 mb-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300'
-                        key={techIndex}>
+                        key={techIndex}
+                      >
                         {tech}
                       </span>
                     ))}

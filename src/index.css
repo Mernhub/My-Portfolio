@@ -9,3 +9,11 @@
   background: rgb(22, 22, 41);
   font-family: "inter", sans-serif;
 }
+@media (min-width: 700px) {
+  .md\:hidden {
+    display: none;
+  }
+  .md\:flex {
+    display: flex;
+  }
+}

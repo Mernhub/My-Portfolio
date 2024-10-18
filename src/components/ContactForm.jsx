@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { GrFormRefresh } from "react-icons/gr";
 
 const ContactForm = () => {
+  const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,9 +22,33 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log(formData);
+    emailjs
+      .sendForm("service_l7ujih7", "template_h424m0n", formRef.current, {
+        publicKey: "7g_bN_6f8dpi8ogTO",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+          setError(false);
+
+          // Clear the input fields
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          formRef.current.reset(); // Optional: Resets the form fields visually
+        },
+        (error) => {
+          console.error(error.text);
+          setError(true);
+          setSuccess(false);
+        }
+      );
   };
 
   const fadeInUp = {
@@ -36,8 +66,7 @@ const ContactForm = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
       >
-
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
           {/* Name Field */}
           <motion.div
             variants={fadeInUp}
@@ -45,10 +74,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
           >
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="name" className="block text-sm font-medium text-white">
               Full Name
             </label>
             <input
@@ -70,10 +96,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
           >
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="email" className="block text-sm font-medium text-white">
               Email Address
             </label>
             <input
@@ -95,10 +118,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
           >
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="message" className="block text-sm font-medium text-white">
               Message
             </label>
             <textarea
@@ -125,6 +145,8 @@ const ContactForm = () => {
             >
               Send Message
             </button>
+            {error && <p className="text-red-500">Error sending message</p>}
+            {success && <p className="text-green-500">Message sent successfully!</p>}
           </motion.div>
         </form>
       </motion.div>
